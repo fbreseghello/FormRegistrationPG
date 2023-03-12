@@ -1,11 +1,11 @@
 <?php
 
 // Define as credenciais de conexão ao banco de dados
-$dbname = "postgres";
+$dbname = "railway";
 $user = "postgres";
-$password = "root";
-$host = "localhost";
-$port = "5432";
+$password = "prvm9G0AIfBEwjaPjGKu";
+$host = "containers-us-west-91.railway.app";
+$port = "6716";
 
 // Conecte-se ao banco de dados
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
