@@ -29,6 +29,12 @@ $complemento = htmlspecialchars($complemento);
 $sql_select = "SELECT * FROM usuarios WHERE nome = $1 AND sobrenome = $2 AND cep = $3 AND rua = $4 AND bairro = $5 AND cidade = $6 AND uf = $7 AND numero = $8 AND complemento = $9";
 $params_select = array($nome, $sobrenome, $cep, $rua, $bairro, $cidade, $uf, $numero, $complemento);
 
+// Consulta para preenchimento dos campos
+$sql_select = "SELECT * FROM usuarios WHERE id = $1";
+$params_select = array($id);
+$result_select = pg_query_params($conn, $sql_select, $params_select);
+$row = pg_fetch_assoc($result_select);
+
 // Execução da consulta SELECT
 $result_select = pg_query_params($conn, $sql_select, $params_select);
 
@@ -67,54 +73,54 @@ pg_close($conn);
 
 <body>
     <!-- Inicio da edição de registro -->
-    <div class="box" style="overflow-x:auto;">
+    <div class="box">
         <form method="POST">
             <fieldset>
                 <legend><b>Editar Registro</b></legend>
                 <br>
                 <div class="inputBox"></div>
                 <label for="nome" class="labelInput"> Nome:
-                    <input type="text" name="nome" id="nome" class="inputUser" />
+                    <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $row['nome']; ?>" />
                 </label><br><br>
 
                 <div class="inputBox"></div>
                 <label for="sobrenome" class="labelInput"> Sobrenome:
-                    <input type="text" name="sobrenome" id="sobrenome" class="inputUser" />
+                    <input type="text" name="sobrenome" id="sobrenome" class="inputUser" value="<?php echo $row['sobrenome']; ?>" />
                 </label><br><br>
 
                 <div class="inputBox"></div>
                 <label for="cep" class="labelInput">Cep:
-                    <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" class="inputUser" />
+                    <input name="cep" type="text" id="cep" size="10" maxlength="9" class="inputUser" value="<?php echo $row['cep']; ?>" />
                 </label><br><br>
 
                 <div class="inputBox"></div>
                 <label for="rua" class="labelInput">Rua:
-                    <input name="rua" type="text" id="rua" size="auto" class="inputUser" />
+                    <input name="rua" type="text" id="rua" size="auto" class="inputUser" value="<?php echo $row['rua']; ?>" />
                 </label><br><br>
 
                 <div class="inputBox"></div>
                 <label for="bairro" class="labelInput">Bairro:
-                    <input name="bairro" type="text" id="bairro" size="auto" class="inputUser" />
+                    <input name="bairro" type="text" id="bairro" size="auto" class="inputUser" value="<?php echo $row['bairro']; ?>" />
                 </label><br><br>
 
                 <div class="inputBoxRead"></div>
                 <label>Cidade:
-                    <input name="cidade" size="auto" class="inputUser" id="cidade" type="text" />
+                    <input name="cidade" size="auto" class="inputUser" id="cidade" type="text" value="<?php echo $row['cidade']; ?>" />
                 </label><br><br>
 
                 <div class="inputBoxRead"></div>
                 <label>Estado:
-                    <input name="uf" size="auto" class="inputUser" id="uf" type="text" />
+                    <input name="uf" size="auto" class="inputUser" id="uf" type="text" value="<?php echo $row['uf']; ?>" />
                 </label><br><br>
 
                 <div class="inputBox"></div>
                 <label for="numero" class="labelInput">Número:
-                    <input name="numero" size="auto" class="inputUser" id="numero" type="number" />
+                    <input name="numero" size="auto" class="inputUser" id="numero" type="number" value="<?php echo $row['numero']; ?>"/>
                 </label><br><br>
 
                 <div class="inputBox"></div>
                 <label for="complemento" class="labelInput">Complemento:
-                    <input name="complemento" size="auto" class="inputUser" id="complemento" type="textarea" />
+                    <input name="complemento" size="auto" class="inputUser" id="complemento" type="textarea" value="<?php echo $row['complemento']; ?>"/>
                 </label><br><br>
 
                 <button type="submit" class="btn" id="submit">Salvar Edição</button><br><br>
