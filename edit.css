@@ -53,10 +53,10 @@ td{
 
 .btn {
   background-color: transparent;
-  display: inline-block; /* display button as an inline block */
+  display: inline-block;
   margin-bottom: 10px;
   margin-top: 10px;
-  margin-right: 10px; /* add space between buttons */
+  margin-right: 10px; 
   border: none;
 }
 
