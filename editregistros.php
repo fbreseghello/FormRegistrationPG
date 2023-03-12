@@ -1,6 +1,6 @@
 <?php
 // Conexão com postgreSQL 
-$conn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=root");
+$conn = pg_connect("host=postgresql://postgres:prvm9G0AIfBEwjaPjGKu@containers-us-west-91.railway.app:6716/railway port=6716 dbname=railway user=postgres password=prvm9G0AIfBEwjaPjGKu");
 $id = $_GET['updateid'];
 
 // Obter os dados do formulário
