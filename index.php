@@ -1,6 +1,6 @@
 <?php
 // Conexão com postgreSQL 
-$conn = pg_connect("host=containers-us-west-200.railway.app port=5815 dbname=railway user=postgres password=dyhNFRtlSR1dLJ8DlLph");
+$conn = pg_connect("host=containers-us-west-91.railway.app port=6716 dbname=railway user=postgres password=prvm9G0AIfBEwjaPjGKu");
 
 // Obter os dados do formulário
 $nome = isset($_POST['nome']) ? pg_escape_string($conn, $_POST['nome']) : "";
