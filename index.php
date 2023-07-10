@@ -61,12 +61,12 @@ pg_close($conn);
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Cadastro</title>
 
-    <!-- Adicionando JQuery -->
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Adicionando Javascript -->
+    <!-- Javascript -->
     <script>
         $(document).ready(function() {
 

@@ -1,8 +1,8 @@
 <?php
-   $host        = "host=containers-us-west-91.railway.app";
-   $port        = "port=6716";
-   $dbname      = "railway";
-   $credentials = "user=postgres password=prvm9G0AIfBEwjaPjGKu";
+   $host        = "";
+   $port        = "";
+   $dbname      = "";
+   $credentials = "";
 
    $db = pg_connect("$host $port dbname=$dbname $credentials");
    

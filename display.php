@@ -9,7 +9,7 @@ include 'config.php';
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="edit.css">
+  <link rel="stylesheet" href="../styles/edit.css">
   <title>Administração</title>
   <script>
     function confirmDelete() {
@@ -41,19 +41,19 @@ include 'config.php';
         <?php
 
                 // Define as credenciais de conexão ao banco de dados
-                $dbname = "railway";
-                $user = "postgres";
-                $password = "prvm9G0AIfBEwjaPjGKu";
-                $host = "containers-us-west-91.railway.app";
-                $port = "6716";
+                $dbname = "";
+                $user = "";
+                $password = "";
+                $host = "";
+                $port = "";
 
-                // Conecte-se ao banco de dados
+                // Conectar ao banco de dados
                 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
-                // Defina a consulta que deseja executar
+                // Definir a consulta que deseja executar
                 $sql = "SELECT * FROM usuarios" ;
 
-                // Execute a consulta
+                // Executar a consulta
                 $result = pg_query($conn, $sql);
 
                 // Itere sobre os dados e exiba o nome de cada usuário

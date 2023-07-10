@@ -52,7 +52,7 @@ pg_close($conn);
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="regtab.css">
+    <link rel="stylesheet" href="../styles/regtab.css">
     <title>Editar Registro</title>
 </head>
 

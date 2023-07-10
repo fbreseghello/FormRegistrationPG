@@ -1,13 +1,13 @@
 <?php
 
 // Define as credenciais de conexão ao banco de dados
-$dbname = "railway";
-$user = "postgres";
-$password = "prvm9G0AIfBEwjaPjGKu";
-$host = "containers-us-west-91.railway.app";
-$port = "6716";
+$dbname = "";
+$user = "";
+$password = "";
+$host = "";
+$port = "";
 
-// Conecte-se ao banco de dados
+// Conectar ao banco de dados
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
 if (isset($_GET['deleteid'])) {
@@ -26,7 +26,7 @@ if (isset($_GET['deleteid'])) {
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styeldel.css">
+    <link rel="stylesheet" href="../styles/styeldel.css">
     <title>Editar Registro</title>
 </head>
 
